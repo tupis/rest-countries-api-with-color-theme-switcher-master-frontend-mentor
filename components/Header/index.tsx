@@ -21,7 +21,7 @@ const Header = ({ toggleTheme, theme }: Props): JSX.Element => {
         <Title>Where in the world?</Title>
         <ThemeTogglerButton onClick={toggleTheme}>
           {theme === "dark" ? <IconMoonFill /> : <IconMoon />}
-          Toggle Theme
+          {theme === "dark" ? "Light Mode" : "Dark Mode"}
         </ThemeTogglerButton>
       </Container>
     </Wrapper>
