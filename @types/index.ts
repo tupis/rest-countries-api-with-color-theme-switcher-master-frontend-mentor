@@ -1,40 +1,31 @@
-export interface ICountry {
-  name: {
-    common: string;
-    nativeName: {
-      [key: string]: {
-        official: string;
-        common: string;
-      };
-    };
-  };
-  population: number;
-  region: string;
-  subregion: string;
-  capital: string[];
-  tld: string[];
-  currencies: {
-    [key: string]: {
-      name: string;
-      symbol: string;
-    };
-  };
-  languages: {
-    [key: string]: string;
-  };
-
-  borders: string[];
-  area: number;
-
-  flag: string;
-  flags: {
-    png: string;
-    svg: string;
-  };
+interface ILanguages {
+  iso639_1: string;
+  iso639_2: string;
+  name: string;
+  nativeName: string;
 }
 
-/*
-    nativeName
-    Border Country
-    Currencies
-*/
+export interface ICountry {
+  name: string;
+  topLevelDomain: string[];
+  capital: string;
+  subregion: string;
+  region: string;
+  area: number;
+  population: number;
+  borders: string[];
+  flags: {
+    svg: string;
+    png: string;
+  };
+  nativeName: string;
+  currencies: [
+    {
+      code: string;
+      name: string;
+      symbol: string;
+    }
+  ];
+  flag: string;
+  languages: ILanguages[];
+}
