@@ -4,8 +4,12 @@ const light = {
   colors: {
     primary: "hsl(0, 0%, 100%)",
 
-    background: "hsl(0, 0%, 98%)",
+    background: "hsl(0, 0%, 95%)",
     text: "hsl(200, 15%, 8%)",
+  },
+
+  width: {
+    maxWidth: "1440px",
   },
 };
 

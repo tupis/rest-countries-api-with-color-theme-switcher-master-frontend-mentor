@@ -8,6 +8,10 @@ const dark = {
     background: "hsl(207, 26%, 17%)",
     text: "hsl(0, 0%, 100%)",
   },
+
+  width: {
+    maxWidth: "1440px",
+  },
 };
 
 export default dark;
