@@ -1,4 +1,3 @@
-import { NextPage } from "next";
 import {
   DarkMode,
   Wrapper,
@@ -8,16 +7,20 @@ import {
   Title,
 } from "./style";
 
-interface Props {}
+interface Props {
+  toggleTheme: () => void;
+}
 
-const Header: NextPage<Props> = ({}) => {
+const Header = ({ toggleTheme }: Props): JSX.Element => {
   return (
     <Wrapper>
       <Container>
         <Title>Where in the world?</Title>
         <DarkMode>
           <IconTheme />
-          <ThemeTogglerButton>Toggle Theme</ThemeTogglerButton>
+          <ThemeTogglerButton onClick={toggleTheme}>
+            Toggle Theme
+          </ThemeTogglerButton>
         </DarkMode>
       </Container>
     </Wrapper>

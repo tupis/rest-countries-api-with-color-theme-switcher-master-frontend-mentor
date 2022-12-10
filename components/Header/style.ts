@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.header`
-  background-color: hsl(0, 0%, 100%);
+  background-color: ${(props) => props.theme.colors.primary};
   width: 100%;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  color: ${(props) => props.theme.colors.text};
   padding: 10px 0;
 `;
 

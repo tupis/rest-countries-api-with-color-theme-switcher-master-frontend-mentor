@@ -5,7 +5,7 @@ type theme = "light" | "dark";
 export const useDarkMode = (): [theme, () => void] => {
   const [theme, setTheme] = useState<theme>("light");
 
-  const setMode = (mode: "light" | "dark") => {
+  const setMode = (mode: theme) => {
     window.localStorage.setItem("theme", mode);
     setTheme(mode);
   };
