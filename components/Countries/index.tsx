@@ -6,7 +6,7 @@ interface Props {
   countries: ICountry[];
 }
 
-const Contries = ({ countries }: Props): JSX.Element => {
+const Countries = ({ countries }: Props): JSX.Element => {
   console.log(countries);
 
   return (
@@ -27,4 +27,4 @@ const Contries = ({ countries }: Props): JSX.Element => {
   );
 };
 
-export default Contries;
+export default Countries;
