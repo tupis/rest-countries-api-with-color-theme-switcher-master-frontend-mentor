@@ -1,4 +1,9 @@
 import styled from "styled-components";
+import { BsFillMoonFill, BsMoon } from "react-icons/bs";
+/*
+BsFillMoonFill
+BsMoon
+*/
 
 export const Wrapper = styled.header`
   background-color: ${(props) => props.theme.colors.primary};
@@ -22,22 +27,26 @@ export const Title = styled.h1`
   font-size: 1.5em;
 `;
 
-export const DarkMode = styled.div`
+export const ThemeTogglerButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-`;
-
-export const ThemeTogglerButton = styled.button`
-  cursor: pointer;
   border: none;
-  background-color: none;
+  background-color: transparent;
+  font-weight: 600;
+  color: ${(props) => props.theme.colors.text};
+  font-size: 1.1em;
 `;
 
-export const IconTheme = styled.div`
-  background-color: black;
-  width: 35px;
-  height: 35px;
-  margin-right: 10px;
+export const IconMoon = styled(BsMoon)`
+  width: 27px;
+  height: 27px;
+  margin-right: 8px;
+`;
+
+export const IconMoonFill = styled(BsFillMoonFill)`
+  width: 27px;
+  height: 27px;
+  margin-right: 8px;
 `;

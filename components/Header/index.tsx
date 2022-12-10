@@ -1,27 +1,28 @@
 import {
-  DarkMode,
   Wrapper,
   Container,
-  IconTheme,
   ThemeTogglerButton,
   Title,
+  IconMoon,
+  IconMoonFill,
 } from "./style";
+import { useDarkMode } from "../../hooks/useDarkMode";
+import { useEffect } from "react";
 
 interface Props {
   toggleTheme: () => void;
+  theme: "dark" | "light";
 }
 
-const Header = ({ toggleTheme }: Props): JSX.Element => {
+const Header = ({ toggleTheme, theme }: Props): JSX.Element => {
   return (
     <Wrapper>
       <Container>
         <Title>Where in the world?</Title>
-        <DarkMode>
-          <IconTheme />
-          <ThemeTogglerButton onClick={toggleTheme}>
-            Toggle Theme
-          </ThemeTogglerButton>
-        </DarkMode>
+        <ThemeTogglerButton onClick={toggleTheme}>
+          {theme === "dark" ? <IconMoonFill /> : <IconMoon />}
+          Toggle Theme
+        </ThemeTogglerButton>
       </Container>
     </Wrapper>
   );

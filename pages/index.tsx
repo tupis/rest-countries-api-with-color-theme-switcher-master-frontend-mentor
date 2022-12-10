@@ -15,7 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <GlobalStyle />
-      <Header toggleTheme={toggle} />
+      <Header toggleTheme={toggle} theme={theme} />
     </ThemeProvider>
   );
 }
