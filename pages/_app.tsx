@@ -1,19 +1,19 @@
 import type { AppProps } from "next/app";
-import GlobalStyle from "../styles/global";
-import { ThemeProvider } from "styled-components";
-import light from "../styles/themes/light";
-import dark from "../styles/themes/dark";
-import { useDarkMode } from "../hooks/useDarkMode";
+import GlobalContextProvider from "../context";
+import { useState, useEffect } from "react";
 
 export default function App({ Component, pageProps }: AppProps) {
-  const [theme] = useDarkMode();
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   return (
     <>
-      <ThemeProvider theme={theme === "dark" ? dark : light}>
-        <GlobalStyle />
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <GlobalContextProvider>
+        {isMounted && <Component {...pageProps} />}
+      </GlobalContextProvider>
     </>
   );
 }
