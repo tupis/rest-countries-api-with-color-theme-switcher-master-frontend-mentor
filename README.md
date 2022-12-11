@@ -44,11 +44,11 @@ $ yarn dev
 
 ## 📚 Funcionalidades
 
-- [ ] Ver todos os países através da API da página inicial
-- [ ] Pesquisar pelo país usando o campo de pesquisa
-- [ ] Filtrar por região
+- [x] Ver todos os países através da API da página inicial
+- [x] Pesquisar pelo país usando o campo de pesquisa
+- [x] Filtrar por região
 - [ ] Clicar no país para ver informações datelhadas em página separada
-- [ ] Trocar o tema do site entre light e dark
+- [x] Trocar o tema do site entre light e dark
 
 ## 🛠️ Construído com
 
