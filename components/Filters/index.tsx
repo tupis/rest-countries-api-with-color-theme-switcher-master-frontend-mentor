@@ -76,7 +76,7 @@ const Filters = ({
           <Option value="Africa">Africa</Option>
           <Option value="Asia">Asia</Option>
           <Option value="Oceania">Oceania</Option>
-          {/* Antártida. América. Ásia. África. Europa. Oceania. */}
+          <Option value="Polar">Polar</Option>
         </Region>
       </Container>
     </>
