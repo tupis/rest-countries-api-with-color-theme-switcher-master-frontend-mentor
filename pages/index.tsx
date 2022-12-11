@@ -10,6 +10,7 @@ import { CountryServices } from "../services/index";
 import { ICountry } from "../@types";
 import { useState } from "react";
 import Countries from "../components/Countries";
+import Filters from "../components/Filters";
 const { allCountry } = CountryServices;
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
@@ -28,6 +29,7 @@ interface Props {
 export default function Home({ countries }: Props) {
   const [allCountries] = useState(countries);
   const [theme, toggle] = useDarkMode();
+  const [filteredCountries, setFilteredCountries] = useState(countries);
 
   return (
     <ThemeProvider theme={theme === "dark" ? dark : light}>
@@ -38,7 +40,11 @@ export default function Home({ countries }: Props) {
       <GlobalStyle />
 
       <Header toggleTheme={toggle} theme={theme} />
-      <Countries countries={allCountries} />
+      <Filters
+        allCountries={allCountries}
+        setFilteredCountries={setFilteredCountries}
+      />
+      <Countries countries={filteredCountries} />
     </ThemeProvider>
   );
 }
