@@ -12,7 +12,7 @@ export const CountryServices = {
     return await APIContry.get(`alpha/${alphaCode}`)
       .then((res) => res.data)
       .catch((res) => {
-        message: "País inexistente";
+        return { message: "País inexistente" };
       });
   },
 };
