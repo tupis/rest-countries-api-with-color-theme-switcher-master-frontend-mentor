@@ -11,10 +11,10 @@ import { ICountry } from "../@types";
 import { useState } from "react";
 import Countries from "../components/Countries";
 import Filters from "../components/Filters";
-const { allCountry } = CountryServices;
+const { allCountries } = CountryServices;
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const countries: ICountry[] = await allCountry();
+  const countries: ICountry[] = await allCountries();
   return {
     props: {
       countries,

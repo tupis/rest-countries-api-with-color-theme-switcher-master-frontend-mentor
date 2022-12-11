@@ -5,7 +5,7 @@ const APIContry = axios.create({
 });
 
 export const CountryServices = {
-  allCountry: async () => {
+  allCountries: async () => {
     return await APIContry.get("all").then((res) => res.data);
   },
   Country: async (alphaCode: string) => {
