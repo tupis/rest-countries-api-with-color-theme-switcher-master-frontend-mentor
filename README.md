@@ -1,6 +1,6 @@
-# Lading Page para Advogados
+# Rest Countries Api
 
-Uma lading page quase em formato de template feito em next para advogados.
+Um desafio de feito através do site [Frontend Mentor](https://www.frontendmentor.io/home), na qual é disponibilizado uma API com várias informações de diversos países, onde poderá filtrar por região, fazer pesquisa por país e claro, aprender um pouco sobre informações de um país de forma extremamente reduzida.
 
 ## 🚀 Começando
 
