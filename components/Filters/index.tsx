@@ -71,10 +71,10 @@ const Filters = ({
 
         <Region onChange={(e: any) => setSelectedRegion(e.target.value)}>
           <Option value="all">All Regions</Option>
-          <Option value="Americas">Americas</Option>
-          <Option value="Europe">Europe</Option>
           <Option value="Africa">Africa</Option>
+          <Option value="Americas">Americas</Option>
           <Option value="Asia">Asia</Option>
+          <Option value="Europe">Europe</Option>
           <Option value="Oceania">Oceania</Option>
           <Option value="Polar">Polar</Option>
         </Region>
