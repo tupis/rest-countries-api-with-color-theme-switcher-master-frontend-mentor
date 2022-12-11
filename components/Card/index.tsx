@@ -22,7 +22,12 @@ const Card = ({
   linkIMG,
 }: Props): JSX.Element => {
   return (
-    <Container>
+    <Container
+      layout
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <ImageFlag src={linkIMG} />
       <ContentInfo>
         <NameCountry>{name}</NameCountry>

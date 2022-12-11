@@ -7,10 +7,13 @@ interface Props {
 }
 
 const Countries = ({ countries }: Props): JSX.Element => {
-  console.log(countries);
-
   return (
-    <Container>
+    <Container
+      layout
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       {countries.map((country) => {
         return (
           <Card
