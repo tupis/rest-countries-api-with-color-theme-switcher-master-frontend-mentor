@@ -8,6 +8,11 @@ export const CountryServices = {
   allCountry: async () => {
     return await APIContry.get("all").then((res) => res.data);
   },
-  filterCountryBySearch: async () => {},
-  filterCountryByRegion: async () => {},
+  Country: async (alphaCode: string) => {
+    return await APIContry.get(`alpha/${alphaCode}`)
+      .then((res) => res.data)
+      .catch((res) => {
+        message: "País inexistente";
+      });
+  },
 };
