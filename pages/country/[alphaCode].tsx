@@ -9,6 +9,7 @@ import GlobalStyle from "../../styles/global";
 import { useDarkMode } from "../../hooks/useDarkMode";
 import Header from "../../components/Header";
 import CountryInfo from "../../components/CountryInfo";
+import BackButton from "../../components/BackButton";
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const { alphaCode } = ctx.query;
@@ -37,6 +38,7 @@ const Country = ({ countryInfo }: Props): JSX.Element => {
       <GlobalStyle />
 
       <Header theme={theme} toggleTheme={toggle} />
+      <BackButton />
       <CountryInfo country={countryInfo} />
     </ThemeProvider>
   );
