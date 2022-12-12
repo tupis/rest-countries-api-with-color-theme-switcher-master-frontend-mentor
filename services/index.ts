@@ -11,8 +11,6 @@ export const CountryServices = {
   Country: async (alphaCode: string) => {
     return await APIContry.get(`alpha/${alphaCode}`)
       .then((res) => res.data)
-      .catch((res) => {
-        return { message: "País inexistente" };
-      });
+      .catch((res) => null);
   },
 };
