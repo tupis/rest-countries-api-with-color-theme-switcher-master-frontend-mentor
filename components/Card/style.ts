@@ -1,5 +1,8 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import Link from "next/link";
+
+export const Wrapper = styled(Link)``;
 
 export const Container = styled(motion.div)`
   display: flex;
