@@ -2,6 +2,8 @@
 
 Um desafio de feito através do site [Frontend Mentor](https://www.frontendmentor.io/home), na qual é disponibilizado uma API com várias informações de diversos países, onde poderá filtrar por região, fazer pesquisa por país e claro, aprender um pouco sobre informações de um país de forma extremamente reduzida.
 
+[Link do projeto em live: https://rest-countries-api-nine-xi.vercel.app/](https://rest-countries-api-nine-xi.vercel.app/)
+
 ## 🚀 Começando
 
 Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
@@ -47,7 +49,7 @@ $ yarn dev
 - [x] Ver todos os países através da API da página inicial
 - [x] Pesquisar pelo país usando o campo de pesquisa
 - [x] Filtrar por região
-- [ ] Clicar no país para ver informações datelhadas em página separada
+- [x] Clicar no país para ver informações datelhadas em página separada
 - [x] Trocar o tema do site entre light e dark
 
 ## 🛠️ Construído com
