@@ -17,6 +17,7 @@ const Countries = ({ countries }: Props): JSX.Element => {
       {countries.map((country) => {
         return (
           <Card
+            href={`/country/${country.alpha3Code.toLocaleLowerCase()}`}
             key={country.name}
             name={country.name}
             linkIMG={country.flags.png}
