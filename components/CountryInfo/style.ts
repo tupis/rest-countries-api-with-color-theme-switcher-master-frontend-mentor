@@ -7,7 +7,7 @@ export const Container = styled.div`
   max-width: ${(props) => props.theme.width.maxWidth};
   color: ${(props) => props.theme.colors.text};
   margin: auto;
-  margin: 200px auto;
+  height: 90vh;
 `;
 
 export const FlagImage = styled.img`
